@@ -33,3 +33,7 @@ Hugo version 0.65.0 or higher is required.
 ## Screenshot
 
 ![Hugo Theme Zdoc Screenshot](images/screenshot.png)
+
+## Original theme addons
+
+* [https://github.com/liwenyip/hugo-easy-gallery](hugo-easy-gallery) integration
