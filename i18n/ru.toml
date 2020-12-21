@@ -1,0 +1,23 @@
+[toc-label]
+other = "Содержание"
+
+[tooltip-written]
+other = "Опубликовано"
+
+[tooltip-modified]
+other = "Изменено"
+
+[tooltip-reading-time]
+other = "Время прочтения"
+
+[summary-dateformat]
+other = "2 Jan 2006"
+
+[reading-time]
+other = "минут на прочтение"
+
+[single-writtenBy]
+other = "АВТОР"
+
+[edit-this-page]
+other = "ОТРЕДАКТИРУЙТЕ"
