@@ -34,6 +34,7 @@ Hugo version 0.65.0 or higher is required.
 
 ![Hugo Theme Zdoc Screenshot](images/screenshot.png)
 
-## Original theme addons
+## Changes from original theme
 
 * [https://github.com/liwenyip/hugo-easy-gallery](hugo-easy-gallery) integration
+* Lang selector <img src="layouts/partials/svgs/translate.svg" width="20" /> replaced with en-codes like <img src="layouts/partials/svgs/lang/en.svg" width="20" height="20" />
