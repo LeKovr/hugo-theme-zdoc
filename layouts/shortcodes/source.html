@@ -1,0 +1,1 @@
+{{ highlight (.Get 0 | readFile) (.Get 0) (or (.Get 1) (print "linenos=table,anchorlinenos=true,lineanchors=" (.Get 0) ) ) }}
