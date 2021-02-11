@@ -1,11 +1,11 @@
 {{ $headerFontSize := 32 }}
-<div class="section__card" style="color: {{ .color | default "#fff" }}">
+<div class="section__card">
   {{ with .header }}
     {{ $headerFontSize = .fontSize }}
     {{ $header := . }}
     <header class="section__card--header">
       {{ with .title }}
-        <h2 class="section__card--title" style="font-size:{{ $header.fontSize }}px; color:{{ $header.color | default "#fff" }};">{{ . }}</h2>
+        <h2 class="section__card--title" style="font-size:{{ $header.fontSize }}px;">{{ . }}</h2>
       {{ end }}
       {{ with .hlcolor }}
         <div class="section__highlight" style="width: {{ $header.width | default "220" }}px; background-color: {{ . | default "transparent" }};"></div>
@@ -13,7 +13,7 @@
     </header>
   {{ end }}
   {{ with .description }}
-    <div class="section__card--main section__card--content" style="color: {{ $.color | default "#fff" }};">
+    <div class="section__card--main section__card--content">
       {{ . | markdownify }}
     </div>
   {{ end }}
@@ -29,18 +29,18 @@
           {{ end }}
           <div class="section__card--submain">
             {{ with .subtitle }}
-              <div class="section__card--subtitle" style="font-size:{{ with $headerFontSize }}{{ sub (int .) 4 }}px;{{ end }} color:{{ $card.color | default "#fff" }}; text-align: {{ $card.subtitlePosition | default "center" }}">
+              <div class="section__card--subtitle" style="font-size:{{ with $headerFontSize }}{{ sub (int .) 4 }}px;{{ end }} text-align: {{ $card.subtitlePosition | default "center" }}">
                 {{ . }}
               </div>
             {{ end }}
             {{ with .description }}
-              <div class="section__card--content" style="color: {{ $card.color | default "#fff" }};">
+              <div class="section__card--content">
                 {{ . | markdownify }}
               </div>
             {{ end }}
             {{ with .button }}
               <a href="{{ .link }}" class="section__card--item" target="{{ .target }}" rel="{{ if eq .target "_blank" }}noreferrer{{ end }}" data-mobile="true">
-                <button class="section__btn section__btn--{{ .size }}" style="background-color: {{ .bgcolor | default "#000" }}; color: {{ .color | default "#fff" }};">{{ .name }}</button>
+                <button class="section__btn section__btn--{{ .size }}" style="background-color: {{ .bgcolor | default "#000" }};">{{ .name }}</button>
               </a>
             {{ end }}
           </div>

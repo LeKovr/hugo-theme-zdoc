@@ -1,11 +1,11 @@
 {{ $headerFontSize := 32 }}
-<div class="section__card" style="color: {{ .color | default "#fff" }}">
+<div class="section__card">
   {{ with .header }}
     {{ $headerFontSize = .fontSize }}
     {{ $header := . }}
     <header class="section__card--header">
       {{ with .title }}
-        <h2 class="section__card--title" style="font-size:{{ $header.fontSize }}px; color:{{ $header.color | default "#fff" }};">{{ . }}</h2>
+        <h2 class="section__card--title" style="font-size:{{ $header.fontSize }}px;">{{ . }}</h2>
       {{ end }}
       {{ with .hlcolor }}
         <div class="section__highlight" style="width: {{ $header.width | default "220" }}px; background-color: {{ . | default "transparent" }};"></div>
@@ -25,12 +25,12 @@
 
       <div>
         {{ with .subtitle }}
-          <div class="section__normal--subtitle" style="font-size:{{ with $headerFontSize }}{{ sub (int .) 4 }}px;{{ end }} color:{{ $body.color | default "#fff" }}; text-align: {{ $body.subtitlePosition | default "center" }}">
+          <div class="section__normal--subtitle" style="font-size:{{ with $headerFontSize }}{{ sub (int .) 4 }}px;{{ end }}; text-align: {{ $body.subtitlePosition | default "center" }}">
             {{ . }}
           </div>
         {{ end }}
         {{ with .description }}
-          <div class="section__normal--content" style="color: {{ $.color | default "#fff" }};">
+          <div class="section__normal--content">
             {{ . | markdownify }}
           </div>
         {{ end }}
